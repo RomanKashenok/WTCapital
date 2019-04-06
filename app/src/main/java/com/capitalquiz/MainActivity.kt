@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             val dataLoader = DataLoader()
-            dataLoader.loadData(this)
+            dataLoader.loadData()
         }
     }
 }
