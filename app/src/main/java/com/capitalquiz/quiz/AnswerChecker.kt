@@ -1,8 +1,7 @@
 package com.capitalquiz.quiz
 
-class AnswerChecker {
+object AnswerChecker {
     fun checkAnswer(answer: String) : Boolean {
-
-        return false
+        return answer == CapitalsFiller.currentCountry?.capital
     }
 }

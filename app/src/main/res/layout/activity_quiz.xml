@@ -35,9 +35,8 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/colorAccent"
-            android:shadowColor="@color/text_shadow"
             tools:ignore="MissingConstraints"
-            app:layout_constraintTop_toBottomOf="@id/questionText"
+            tools:layout_constraintTop_toBottomOf="@id/questionText"
             android:gravity="center"/>
 
 
