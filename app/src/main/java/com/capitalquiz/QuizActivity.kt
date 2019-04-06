@@ -8,6 +8,7 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.capitalquiz.quiz.AnswerChecker
 import com.capitalquiz.quiz.CapitalsFiller
 import com.capitalquiz.quiz.QuizDataHolder
 import com.capitalquiz.utils.Constants.ANSWER_DELAY
@@ -38,7 +39,7 @@ class QuizActivity : AppCompatActivity() {
                 CapitalsFiller.isChecked = true
                 val answer = (b as Button).text.toString()
 
-                if(answer == CapitalsFiller.currentCountry?.capital) {
+                if (answer == CapitalsFiller.currentCountry?.capital) {
                     b.setBackgroundResource(R.color.button_answer_correct)
                     QuizDataHolder.correctAnswers++
                 } else {
@@ -49,7 +50,15 @@ class QuizActivity : AppCompatActivity() {
                 Handler().postDelayed({
                     CapitalsFiller.fillTheButtons(allButtons, countryName)
                 }, ANSWER_DELAY)
+                QuizDataHolder.currentGameNumber++
+                if (QuizDataHolder.gamesLimit == QuizDataHolder.currentGameNumber) {
+                    val finishIntent = Intent(this, FinishActivity::class.java)
+                    QuizDataHolder.currentGameNumber = 0
+                    startActivity(finishIntent)
+                }
             }
+
+
         }
 
     }
