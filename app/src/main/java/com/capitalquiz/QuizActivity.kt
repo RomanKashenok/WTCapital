@@ -8,7 +8,6 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import com.capitalquiz.quiz.AnswerChecker
 import com.capitalquiz.quiz.CapitalsFiller
 import com.capitalquiz.quiz.QuizDataHolder
 import com.capitalquiz.utils.Constants.ANSWER_DELAY
@@ -25,19 +24,18 @@ class QuizActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
-
         questionText.text = getString(R.string.question_text)
         val allButtons = buttonsContainerId.touchables
-        CapitalsFiller.fillTheButtons(allButtons)
+        CapitalsFiller.fillTheButtons(allButtons, question)
+
         assignListenersToButtons(allButtons)
     }
 
     private fun assignListenersToButtons(allButtons: ArrayList<View>) {
-
         for (button in allButtons) {
             button.setOnClickListener { b ->
                 allButtons.forEach { but -> (but as Button).isEnabled = false }
-
+                CapitalsFiller.isChecked = true
                 val answer = (b as Button).text.toString()
 
                 if(answer == CapitalsFiller.currentCountry?.capital) {
@@ -49,12 +47,7 @@ class QuizActivity : AppCompatActivity() {
                 }
 
                 Handler().postDelayed({
-                    allButtons.forEach { but -> {
-                        (but as Button).isEnabled = true
-                        b.setBackgroundResource(R.color.button_answer_incorrect)
-                        }
-                    }
-                    CapitalsFiller.fillTheButtons(allButtons)
+                    CapitalsFiller.fillTheButtons(allButtons, question)
                 }, ANSWER_DELAY)
             }
         }

@@ -18,6 +18,7 @@
     <color name="colorGrayWhite">#F1F1F1</color>
     <color name="colorGrayDark">#222222</color>
 
+    <color name="button_color_default">#CECECE</color>
     <color name="button_answer_correct">#58D68D</color>
     <color name="button_answer_incorrect">#EC7063</color>
 </resources>
