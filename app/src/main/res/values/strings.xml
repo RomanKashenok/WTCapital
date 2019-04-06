@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="enter_count_questions">Enter count questions</string>
     <string name="enter">Enter</string>
     <string name="question">Question</string>
     <string name="answer1">Answer1</string>
@@ -11,4 +10,5 @@
     <string name="answer6">Answer6</string>
     <string name="score">Score</string>
     <string name="games_number_exception">Enter questions number</string>
+    <string name="question_text">The capital of</string>
 </resources>

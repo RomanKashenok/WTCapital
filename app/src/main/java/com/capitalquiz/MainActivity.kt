@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import com.capitalquiz.db.DataLoader
 import com.capitalquiz.quiz.QuizDataHolder.gamesLimit
 import kotlinx.android.synthetic.main.activity_count.*
 
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
                 gamesLimit = Integer.parseInt(gamesNumber)
                 startActivity(QuizActivity.getIntent(this))
             }
+
+            val dataLoader = DataLoader()
+            dataLoader.loadData(this)
         }
     }
 }

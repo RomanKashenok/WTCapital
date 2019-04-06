@@ -18,7 +18,9 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+        questionText.text = getString(R.string.question_text)
         val allButtons = buttonsContainerId.touchables
+
 
     }
 }
