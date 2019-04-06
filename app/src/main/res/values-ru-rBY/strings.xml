@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WTCapital</string>
+    <string name="enter">Ввод</string>
+    <string name="question">Вопрос</string>
+    <string name="capitals">capitalsrus</string>
+    <string name="answer1">Answer1</string>
+    <string name="answer2">Answer2</string>
+    <string name="answer3">Answer3</string>
+    <string name="answer4">Answer4</string>
+    <string name="answer5">Answer5</string>
+    <string name="answer6">Answer6</string>
+    <string name="score">Счет</string>
+    <string name="games_number_question">Введите количество вопросов</string>
+    <string name="question_text">Столица </string>
+</resources>

@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">WTCapital</string>
     <string name="enter">Enter</string>
     <string name="question">Question</string>
+    <string name="capitals">capitalseng</string>
     <string name="answer1">Answer1</string>
     <string name="answer2">Answer2</string>
     <string name="answer3">Answer3</string>
