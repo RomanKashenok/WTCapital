@@ -23,7 +23,7 @@ object CapitalsFiller {
 
     private fun insertCountryCapital(button: View) {
         var tempCountry: Country
-        do {tempCountry = getRandomCountry()} while (tempCountry != currentCountry)
+        do {tempCountry = getRandomCountry()} while (tempCountry == currentCountry)
 
         (button as Button).text = tempCountry.capital
     }

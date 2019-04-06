@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_count)
 
+        val dataLoader = DataLoader()
+        dataLoader.execute()
+
         val enterButton = entryBtn
 
         enterButton.setOnClickListener {
@@ -23,9 +26,6 @@ class MainActivity : AppCompatActivity() {
                 gamesLimit = Integer.parseInt(gamesNumber)
                 startActivity(QuizActivity.getIntent(this))
             }
-
-            val dataLoader = DataLoader()
-            dataLoader.loadData()
         }
     }
 }

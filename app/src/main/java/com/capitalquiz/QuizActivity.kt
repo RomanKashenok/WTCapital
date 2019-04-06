@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.capitalquiz.quiz.AnswerChecker
 import com.capitalquiz.quiz.CapitalsFiller
+import com.capitalquiz.quiz.QuizDataHolder
 import com.capitalquiz.utils.Constants.ANSWER_DELAY
 import kotlinx.android.synthetic.main.activity_quiz.*
 
@@ -41,12 +42,18 @@ class QuizActivity : AppCompatActivity() {
 
                 if(answer == CapitalsFiller.currentCountry?.capital) {
                     b.setBackgroundResource(R.color.button_answer_correct)
+                    QuizDataHolder.correctAnswers++
                 } else {
                     b.setBackgroundResource(R.color.button_answer_incorrect)
                     Toast.makeText(this, CapitalsFiller.currentCountry?.capital, Toast.LENGTH_LONG).show()
                 }
 
                 Handler().postDelayed({
+                    allButtons.forEach { but -> {
+                        (but as Button).isEnabled = true
+                        b.setBackgroundResource(R.color.button_answer_incorrect)
+                        }
+                    }
                     CapitalsFiller.fillTheButtons(allButtons)
                 }, ANSWER_DELAY)
             }
