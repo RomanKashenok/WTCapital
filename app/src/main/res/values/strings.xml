@@ -10,4 +10,5 @@
     <string name="answer5">Answer5</string>
     <string name="answer6">Answer6</string>
     <string name="score">Score</string>
+    <string name="games_number_exception">Enter questions number</string>
 </resources>
