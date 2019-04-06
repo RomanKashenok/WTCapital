@@ -26,7 +26,7 @@ class QuizActivity : AppCompatActivity() {
         setContentView(R.layout.activity_quiz)
         questionText.text = getString(R.string.question_text)
         val allButtons = buttonsContainerId.touchables
-        CapitalsFiller.fillTheButtons(allButtons, question)
+        CapitalsFiller.fillTheButtons(allButtons, countryName)
 
         assignListenersToButtons(allButtons)
     }
@@ -47,7 +47,7 @@ class QuizActivity : AppCompatActivity() {
                 }
 
                 Handler().postDelayed({
-                    CapitalsFiller.fillTheButtons(allButtons, question)
+                    CapitalsFiller.fillTheButtons(allButtons, countryName)
                 }, ANSWER_DELAY)
             }
         }

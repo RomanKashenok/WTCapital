@@ -13,12 +13,15 @@ object CapitalsFiller {
     var currentCountry: Country? = null
     private var tempCapitals = ArrayList<String>()
 
-    fun fillTheButtons(buttons: ArrayList<View>, question: TextView) {
-        if(isChecked) uncheckAllButtons(buttons)
+    fun fillTheButtons(buttons: ArrayList<View>, countryName: TextView) {
+        if(isChecked) {
+            tempCapitals.clear()
+            uncheckAllButtons(buttons)
+        }
         currentCountry = getRandomCountry()
 
         currentCountry?.let {country ->
-            question.text = country.name
+            countryName.text = country.name
             tempCapitals.add(country.capital)
 
             for(i in 0 until buttons.size - 1) {

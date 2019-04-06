@@ -25,12 +25,12 @@
             tools:ignore="MissingConstraints"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="100dp"
             app:layout_constraintTop_toTopOf="parent"
             android:gravity="center"/>
 
     <TextView
-            android:id="@+id/question"
+            android:id="@+id/countryName"
             android:hint="@string/question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,8 @@
             android:textColor="@color/colorAccent"
             tools:ignore="MissingConstraints"
             tools:layout_constraintTop_toBottomOf="@id/questionText"
-            android:gravity="center"/>
+            android:gravity="center" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/questionText"/>
 
 
     <LinearLayout
@@ -47,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minWidth="120dp"
-            app:layout_constraintTop_toBottomOf="@+id/question"
+            app:layout_constraintTop_toBottomOf="@+id/countryName"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +64,7 @@
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="16dp"
                 android:gravity="center"
-                app:layout_constraintTop_toBottomOf="@+id/question"
+                app:layout_constraintTop_toBottomOf="@+id/countryName"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"/>
 
