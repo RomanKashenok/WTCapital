@@ -29,10 +29,10 @@ class DataLoader: AsyncTask<Unit, Unit, String>() {
     }
 
     override fun onPostExecute(result: String) {
-        QuizDataHolder.countries = ArrayList(Gson().fromJson(result, Array<Country>::class.java).toList())
-        if (QuizDataHolder.countries.size < 100) {
+//        QuizDataHolder.countries = ArrayList(Gson().fromJson(result, Array<Country>::class.java).toList())
+//        if (QuizDataHolder.countries.size < 100) {
             loadDataFromRaw()
-        }
+//        }
     }
 
     private fun loadDataFromRaw() {
