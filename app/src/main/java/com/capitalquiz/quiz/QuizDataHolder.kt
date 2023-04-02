@@ -14,5 +14,7 @@ object QuizDataHolder {
     var currentGameNumber = 0
     var countries = ArrayList<Country>()
     private var capitals = ArrayList<String>()
+    var correctAnswers = 0
+
 
 }
